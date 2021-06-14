@@ -35,6 +35,7 @@ cd /etc/nginx/sites-enabled\
 sudo nano default\
  
 change the content to following:\
+ 
  server {
       listen 80;
       listen [::]:80;
@@ -64,7 +65,7 @@ change the content to following:\
       location ~ ^(/[a-z\-]+)?/system/files/ { # For Drupal >= 7
           try_files $uri /index.php?$query_string;
       }
-  }
+  }\
   
   service nginx restart\
  
