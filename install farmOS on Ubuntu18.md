@@ -8,7 +8,7 @@ sudo apt install software-properties-common\
 sudo add-apt-repository ppa:ondrej/php\
 sudo apt update\
 sudo apt install php7.4-fpm\
-sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl php7.4-pgsql -y\
+sudo apt install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap php7.4-zip php7.4-intl php7.4-pgsql -y
 
  #install postgresql\
 sudo -s\
@@ -20,7 +20,7 @@ apt-get install postgresql-12 -y\
 echo "listen_addresses='*'" >> /etc/postgresql/12/main/postgresql.conf\
 echo "host all all 0.0.0.0/0 md5" >> /etc/postgresql/12/main/pg_hba.conf\
 service postgresql restart\
-exit\
+exit
 
 #setup psql\
 sudo -i -u postgres\
@@ -28,13 +28,13 @@ psql\
 CREATE USER <username> WITH PASSWORD '<password>'; replace with user/password\
 ALTER USER <username> CREATEDB;\
 \q\
-exit\
+exit
  
 #modify nginx config file\
 cd /etc/nginx/sites-enabled\
-sudo nano default\
+sudo nano default
  
-change the content to following:\
+change the content to following:
  
  server {
       listen 80;
@@ -65,9 +65,9 @@ change the content to following:\
       location ~ ^(/[a-z\-]+)?/system/files/ { # For Drupal >= 7
           try_files $uri /index.php?$query_string;
       }
-  }\
+  }
   
-  service nginx restart\
+  service nginx restart
  
 cd  <web folder>: sites/default\
 mkdir files\
