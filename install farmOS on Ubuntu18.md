@@ -1,4 +1,5 @@
-#install nginx\\
+#install nginx
+
 sudo apt-get install nginx
 #install php7.4
 sudo apt update
