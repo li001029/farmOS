@@ -36,7 +36,7 @@ sudo nano default
  
 change the content to following:
  
- server {
+      server {
       listen 80;
       listen [::]:80;
       root #this would be your farmOS /web directory
@@ -65,7 +65,7 @@ change the content to following:
       location ~ ^(/[a-z\-]+)?/system/files/ { # For Drupal >= 7
           try_files $uri /index.php?$query_string;
       }
-  }
+      }
   
   service nginx restart
  
@@ -73,9 +73,9 @@ cd  <web folder>: sites/default\
 mkdir files\
 chmod 777 files\
 cp default.settings.php settings.php\
-chmod 777 settings.php\
+chmod 777 settings.php
  
 sudo -i -u postgres\
 psql\
-ALTER DATABASE "postgres" SET bytea_output = 'escape';\
+ALTER DATABASE "postgres" SET bytea_output = 'escape';
 
