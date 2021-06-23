@@ -1,13 +1,13 @@
-Step1:\
+Step1:
 
 Go to the link https://github.com/farmOS/farmOS/releases. Select version 2.0.0-alpha1\
 Download and extract the farmOS packaged release tarball, farmOS-2.0.0-alpha1.tar.gz into any directory of your choice. Extract it.\
 Once extracted, the folder farmOS should show in the current directory.\
-Open the farmOS folder and web folder will contain all the source code used to build the farmOS website.\
+Open the farmOS folder and web folder will contain all the source code used to build the farmOS website.
 
 Step2:
 
-In Ubuntu terminal:\
+In Ubuntu terminal:
 
 #install nginx\
 sudo apt-get install nginx
